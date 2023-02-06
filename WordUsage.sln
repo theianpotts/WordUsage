@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "WordUsage", "wordusage\WordUsage.esproj", "{89AAB502-AB4D-4683-8B25-EA9C5DCFD997}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{89AAB502-AB4D-4683-8B25-EA9C5DCFD997}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89AAB502-AB4D-4683-8B25-EA9C5DCFD997}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89AAB502-AB4D-4683-8B25-EA9C5DCFD997}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{89AAB502-AB4D-4683-8B25-EA9C5DCFD997}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89AAB502-AB4D-4683-8B25-EA9C5DCFD997}.Release|Any CPU.Build.0 = Release|Any CPU
+		{89AAB502-AB4D-4683-8B25-EA9C5DCFD997}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {95D57E32-0E7D-4C46-A2BD-F6805258D6B5}
+	EndGlobalSection
+EndGlobal
