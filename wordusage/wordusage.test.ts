@@ -4,6 +4,7 @@ import { countWordUsageInText } from './wordusage';
 describe('word usage tests', () => {
     test('Counts usage in sample text 1', () => {
         var words = countWordUsageInText('Hello hello world');
+        expect(words.length).toBe(2);
         expect(words[0][0]).toBe('hello');
         expect(words[0][1]).toBe(2);
         expect(words[1][0]).toBe('world');
@@ -32,6 +33,7 @@ sed id semper.Semper eget duis at tellus at urna condimentum mattis
 cras semper auctor neque vitae tempus quam pellentesque.`;
 
         var words = countWordUsageInText(text);
+        expect(words.length).toBe(97);
         expect(words[0][0]).toBe('et');
         expect(words[0][1]).toBe(6);
         expect(words[1][0]).toBe('eget');
