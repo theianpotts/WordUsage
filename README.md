@@ -1,14 +1,14 @@
 # WordUsage
 This is a simple TS console application run with NodeJS to count word usage in text files
 
-# Prerequisites
+## Prerequisites
 You will need to download and install NodeJs to run this application via a console/terminal using node. Download from https://nodejs.dev/en/download/
 
-# Building WordUsage
+## Building WordUsage
 Open a console/terminal on the folder containing the wordusage.ts file and others and enter
   npm run build
   
-# Running WordUsage
+## Running WordUsage
 Once the application has been built (ie. transpiled into JS) it can be run using node as follows:
 
   node wordusage sampletext.txt
