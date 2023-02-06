@@ -6,7 +6,9 @@ You will need to download and install NodeJs to run this application via a conso
 
 ## Building WordUsage
 Clone the repository locally.
-Open a console/terminal on the folder containing the wordusage.ts file and others and enter
+Open a console/terminal on the folder containing the wordusage.ts file and others and (on first usage) enter:
+  npm install
+Then enter:
   npm run build
   
 ## Running WordUsage
