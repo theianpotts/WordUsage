@@ -11,6 +11,15 @@ describe('word usage tests', () => {
         expect(words[1][1]).toBe(1);
     });
 
+    test('Counts usage in sample text 2', () => {
+        var words = countWordUsageInText('hello! world, hello.');
+        expect(words.length).toBe(2);
+        expect(words[0][0]).toBe('hello');
+        expect(words[0][1]).toBe(2);
+        expect(words[1][0]).toBe('world');
+        expect(words[1][1]).toBe(1);
+    });
+
     test('Counts usage in longer sample text', () => {
         var text = `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
 tempor incididunt ut labore et dolore magna aliqua.Non sodales neque

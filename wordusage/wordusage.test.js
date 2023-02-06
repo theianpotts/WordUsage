@@ -11,6 +11,14 @@ const wordusage_1 = require("./wordusage");
         (0, globals_1.expect)(words[1][0]).toBe('world');
         (0, globals_1.expect)(words[1][1]).toBe(1);
     });
+    (0, globals_1.test)('Counts usage in sample text 2', () => {
+        var words = (0, wordusage_1.countWordUsageInText)('hello! world, hello.');
+        (0, globals_1.expect)(words.length).toBe(2);
+        (0, globals_1.expect)(words[0][0]).toBe('hello');
+        (0, globals_1.expect)(words[0][1]).toBe(2);
+        (0, globals_1.expect)(words[1][0]).toBe('world');
+        (0, globals_1.expect)(words[1][1]).toBe(1);
+    });
     (0, globals_1.test)('Counts usage in longer sample text', () => {
         var text = `Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
 tempor incididunt ut labore et dolore magna aliqua.Non sodales neque
