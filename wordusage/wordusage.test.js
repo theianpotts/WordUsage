@@ -5,6 +5,7 @@ const wordusage_1 = require("./wordusage");
 (0, globals_1.describe)('word usage tests', () => {
     (0, globals_1.test)('Counts usage in sample text 1', () => {
         var words = (0, wordusage_1.countWordUsageInText)('Hello hello world');
+        (0, globals_1.expect)(words.length).toBe(2);
         (0, globals_1.expect)(words[0][0]).toBe('hello');
         (0, globals_1.expect)(words[0][1]).toBe(2);
         (0, globals_1.expect)(words[1][0]).toBe('world');
@@ -31,6 +32,7 @@ sed id semper.Semper eget duis at tellus at urna condimentum mattis
         pellentesque.Egestas purus viverra accumsan in nisl nisi scelerisque eu.A
 cras semper auctor neque vitae tempus quam pellentesque.`;
         var words = (0, wordusage_1.countWordUsageInText)(text);
+        (0, globals_1.expect)(words.length).toBe(97);
         (0, globals_1.expect)(words[0][0]).toBe('et');
         (0, globals_1.expect)(words[0][1]).toBe(6);
         (0, globals_1.expect)(words[1][0]).toBe('eget');

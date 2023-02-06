@@ -44,10 +44,10 @@ const countWordUsageInText = (text) => {
     // 2. Now count those words and build a dictionary of usage
     var dictOfUsage = {};
     if (words) {
-        for (var word of words) {
-            let wordLower = word.toLowerCase();
+        words.map(w => {
+            let wordLower = w.toLowerCase();
             dictOfUsage[wordLower] ? dictOfUsage[wordLower]++ : dictOfUsage[wordLower] = 1;
-        }
+        });
     }
     // 3. Now turn that into an array and sort by usage
     // (NB: The sort order here is descending, we might want the code to specify order via a param in future)
@@ -76,7 +76,7 @@ const countWordUsageInFile = (filename) => {
 // =======================================================================
 var args = process.argv;
 if (args.length > 2) {
-    var filename = args[2];
+    let filename = args[2];
     countWordUsageInFile(filename);
 }
 else {
