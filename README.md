@@ -21,3 +21,6 @@ The project also includes a couple of unit tests written using Jest (ts-jest spe
 The tests may be run from the console with:
 
 npm test
+
+## The Code
+WordUsage is written in TypeScript with the main code found in the wordusage.ts file. This is transpiled into JS on building. The accompanying tests are found in wordusage.test.ts
