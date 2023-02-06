@@ -28,6 +28,7 @@ var __importStar = (this && this.__importStar) || function (mod) {
     return result;
 };
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.countWordUsageInText = void 0;
 // So build with:
 //  npm run build
 // then run with
@@ -52,19 +53,20 @@ const countWordUsageInText = (text) => {
     // (NB: The sort order here is descending, we might want the code to specify order via a param in future)
     return Object.keys(dictOfUsage).map(k => ([k, dictOfUsage[k]])).sort((a, b) => (Number(b[1]) - Number(a[1])));
 };
+exports.countWordUsageInText = countWordUsageInText;
 const countWordUsageInFile = (filename) => {
-    // 1. Read file into string
-    fs.readFile(filename, 'utf8', (err, data) => {
+    // Read file into string
+    fs.readFile(filename, 'utf8', (err, filedata) => {
         if (err) {
             console.error(err);
             return;
         }
-        var words = countWordUsageInText(data);
+        var words = (0, exports.countWordUsageInText)(filedata);
         if (words) {
             // Output the results to console
             // (NB: All results are output. Another improvement could be to have an extra command line param to specify to return the top N results)
             for (var word of words) {
-                console.log(word[0] + ' ' + word[1]);
+                console.log(word[0] + ': ' + word[1]);
             }
         }
     });
@@ -80,7 +82,4 @@ if (args.length > 2) {
 else {
     console.log("No filename argument provided.");
 }
-// (For extensibility allow sort to be either way etc)
-// Add unit test with some string of words passed in?
-// See https://jestjs.io/docs/getting-started
 //# sourceMappingURL=wordusage.js.map

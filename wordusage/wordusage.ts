@@ -16,7 +16,7 @@ import * as fs from 'fs';
 // Functions used by WordUsage application
 // =======================================================================
 
-const countWordUsageInText = (text: string) => {
+export const countWordUsageInText = (text: string) => {
 
     // 1. First parse the words in text into an array (elminating whitespace, punctuation etc)
     var words = text.match(/\b(\w+)\b/g);
@@ -37,20 +37,20 @@ const countWordUsageInText = (text: string) => {
 
 const countWordUsageInFile = (filename: string) => {
 
-    // 1. Read file into string
-    fs.readFile(filename, 'utf8', (err: any, data: string) => {
+    // Read file into string
+    fs.readFile(filename, 'utf8', (err: any, filedata: string) => {
         if (err) {
             console.error(err);
             return;
         }
 
-        var words = countWordUsageInText(data);
+        var words = countWordUsageInText(filedata);
 
         if (words) {
             // Output the results to console
             // (NB: All results are output. Another improvement could be to have an extra command line param to specify to return the top N results)
             for (var word of words) {
-                console.log(word[0] + ' ' + word[1]);
+                console.log(word[0] + ': ' + word[1]);
             }
         }
     });
@@ -71,7 +71,3 @@ if (args.length > 2) {
 } else {
     console.log("No filename argument provided.");
 }
-
-// (For extensibility allow sort to be either way etc)
-// Add unit test with some string of words passed in?
-// See https://jestjs.io/docs/getting-started
